@@ -35,33 +35,44 @@
         },
         methods: {
             getPoets() {
-                this.axios.get('/poets/' + this.dynasty_id + '?skip=0&limit=10')
-                    .then(response => this.poets = response.data)
-                    .catch(error => console.log(error))
-            },
-            getPoetCount() {
-                this.axios.get('/poets/count/' + this.dynasty_id)
-                    .then(response => this.poetCount = response.data)
+                this.axios.post('/poets/', {
+                    "dynastyId": this.dynasty_id,
+                    "page": 1,
+                    "pageSize": 10,
+                })
+                    .then(response => {
+                        this.poets = response.data.data.items
+                        this.poetCount = response.data.data.total
+                    })
                     .catch(error => console.log(error))
             },
             onShowSizeChange(current, pageSize) {
                 this.pageSize = pageSize
-                var skip = (current - 1) * pageSize
-                this.axios.get('/poets/' + this.dynasty_id + '?skip=' + skip + '&limit=' + pageSize)
-                    .then(response => this.poets = response.data)
+                this.axios.post('/poets/', {
+                    "dynastyId": this.dynasty_id,
+                    "page": current,
+                    "pageSize": pageSize,
+                })
+                    .then(response => {
+                        this.poets = response.data.data.items
+                    })
                     .catch(error => console.log(error))
             },
             pageChange(page, pageSize) {
                 this.pageCurrent = page
-                var skip = (page - 1) * pageSize
-                this.axios.get('/poets/' + this.dynasty_id + '?skip=' + skip + '&limit=' + pageSize)
-                    .then(response => this.poets = response.data)
+                this.axios.post('/poets/', {
+                    "dynastyId": this.dynasty_id,
+                    "page": page,
+                    "pageSize": pageSize,
+                })
+                    .then(response => {
+                        this.poets = response.data.data.items
+                    })
                     .catch(error => console.log(error))
             }
         },
         mounted() {
             this.getPoets()
-            this.getPoetCount()
         },
         watch: {
             $route: {
@@ -71,7 +82,6 @@
                     this.pageCurrent = 1
                     this.pageSize = 10
                     this.getPoets()
-                    this.getPoetCount()
                 }
             }
         }

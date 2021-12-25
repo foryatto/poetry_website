@@ -9,7 +9,7 @@ import VueAxios from 'vue-axios'
 import axios from 'axios'
 Vue.use(VueAxios, axios)
 // axios.defaults.baseURL="https://shici.foryatto.com/api/v1";
-axios.defaults.baseURL="http://127.0.0.1:8000/api/v1/poetry/";
+axios.defaults.baseURL="http://127.0.0.1:8199/api/v1/poetry/";
 
 import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css'

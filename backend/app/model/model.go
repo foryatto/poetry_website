@@ -11,6 +11,7 @@ package model
 type Dynasty struct {
     Id   string `orm:"id"   json:"id"`   //   
     Name string `orm:"name" json:"name"` //   
+    Time int    `orm:"time" json:"time"` //   
 }
 
 

@@ -20,13 +20,15 @@ type DynastyDao struct {
 // DynastyColumns defines and stores column names for table dynasty.
 type DynastyColumns struct {
 	Id    string //   
-    Name  string //
+    Name  string //   
+    Time  string //
 }
 
 //  dynastyColumns holds the columns for table dynasty.
 var dynastyColumns = DynastyColumns{
 	Id:   "id",    
-            Name: "name",
+            Name: "name",  
+            Time: "time",
 }
 
 // NewDynastyDao creates and returns a new DAO object for table data access.
