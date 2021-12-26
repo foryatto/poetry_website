@@ -1,6 +1,6 @@
 package define
 
-type QueryDynastyResp struct {
+type DynastyQueryResp struct {
 	Id   string `json:"id"`
 	Name string `json:"name"`
 }

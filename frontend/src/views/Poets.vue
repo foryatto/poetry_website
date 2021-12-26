@@ -6,7 +6,7 @@
         <a-list item-layout="horizontal" :data-source="poets">
             <a-list-item slot="renderItem" slot-scope="poet">
                 <a-list-item-meta :description="poet.profile">
-                    <router-link :to="{name:'Poems', query:{poet_id: poet.id} }" slot="title">{{ poet.name }}
+                    <router-link :to="{name:'Poems', query:{poet_id: poet.id, poet_name: poet.name} }" slot="title">{{ poet.name }}
                     </router-link>
                 </a-list-item-meta>
             </a-list-item>

@@ -11,8 +11,8 @@ var Dynasty = dynastyService{}
 
 type dynastyService struct{}
 
-func (ds *dynastyService) QueryAll() (*[]define.QueryDynastyResp, error) {
-	var queryRes []define.QueryDynastyResp
+func (ds *dynastyService) QueryAll() (*[]define.DynastyQueryResp, error) {
+	var queryRes []define.DynastyQueryResp
 	err := dao.Dynasty.Ctx(context.TODO()).Order(dao.Dynasty.Columns.Time).Scan(&queryRes)
 	if err != nil {
 		g.Log().Line().Warning("query all dynasties err: ", err)
@@ -21,8 +21,8 @@ func (ds *dynastyService) QueryAll() (*[]define.QueryDynastyResp, error) {
 	return &queryRes, nil
 }
 
-func (ds *dynastyService) GetById(dynastyId string) (*define.QueryDynastyResp, error) {
-	var queryRes define.QueryDynastyResp
+func (ds *dynastyService) GetById(dynastyId string) (*define.DynastyQueryResp, error) {
+	var queryRes define.DynastyQueryResp
 	err := dao.Dynasty.Ctx(context.TODO()).Scan(&queryRes, g.Map{
 		dao.Dynasty.Columns.Id: dynastyId,
 	})

@@ -22,7 +22,7 @@ func Init() {
 		})
 
 		group.Group("/poems", func(group *ghttp.RouterGroup) {
-			group.POST("/today", api.Poem.Today)
+			group.GET("/today", api.Poem.Today)
 			group.POST("/search", api.Poem.Search)
 			group.POST("/brief", api.Poem.QueryBrief)
 			group.POST("/detail", api.Poem.QueryDetail)

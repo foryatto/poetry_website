@@ -13,7 +13,7 @@ var Poet = poetApi{}
 type poetApi struct{}
 
 func (poet *poetApi) Query(r *ghttp.Request) {
-	var param *define.QueryPoetParam
+	var param *define.PoetQueryParam
 	shared.Parse(r, &param)
 	queryResult, err := service.Poet.Query(param)
 	if err != nil {
