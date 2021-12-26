@@ -7,13 +7,13 @@
                 </router-link>
             </a-col>
             <a-col :xs="16" :sm="12" :md="19" :lg="19" :xl="19">
-                <a-input-search placeholder="搜索：名称 / 诗句" style="width: 200px" @search="onSearch" />
+                <a-input-search placeholder="搜索：名称" style="width: 200px" @search="onSearch" />
             </a-col>
-            <a-col :xs="2" :sm="4" :md="3" :lg="3" :xl="3">
+            <!-- <a-col :xs="2" :sm="4" :md="3" :lg="3" :xl="3">
                 <a-button type="primary" @click="login">
                     登录
                 </a-button>
-            </a-col>
+            </a-col> -->
         </a-row>
     </div>
 </template>

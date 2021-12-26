@@ -46,8 +46,10 @@
         },
         methods: {
             getPoemById() {
-                this.axios.get('/poems/detail/' + this.poem_id)
-                    .then(response => this.poem = response.data)
+                this.axios.post('/poems/detail/', {
+                  "poemId": this.poem_id,
+                })
+                    .then(response => this.poem = response.data.data)
                     .catch(error => console.log(error))
             }
         },

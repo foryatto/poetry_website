@@ -33,8 +33,12 @@
         },
         methods: {
             getPoemsByKeyWord() {
-                this.axios.get('/poems/search?keyword=' + this.keyword)
-                    .then(response => this.poems = response.data)
+                this.axios.post('/poems/search', {
+                    "keyword": this.keyword,
+                    "page":1,
+                    "pageSize": 50
+                })
+                    .then(response => this.poems = response.data.data.items)
                     .catch(error => console.log(error))
             }
         },

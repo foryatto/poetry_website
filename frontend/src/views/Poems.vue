@@ -1,7 +1,7 @@
 <template>
     <div>
         <a-divider>
-            {{ poems[0].poet.name }}
+            {{ poet_name }}
         </a-divider>
         <a-list item-layout="horizontal" :data-source="poems">
             <a-list-item slot="renderItem" slot-scope="poem">
@@ -32,37 +32,52 @@
                 poemCount: 0,
                 pageCurrent: 1,
                 pageSize: 10,
+                poet_name: this.$route.query.poet_name
             }
         },
         methods: {
             getPoemsById() {
-                this.axios.get('/poems/' + this.poet_id + '?skip=0&limit=10')
-                    .then(response => this.poems = response.data)
-                    .catch(error => console.log(error))
-            },
-            getPoemCount() {
-                this.axios.get('/poems/count/' + this.poet_id)
-                    .then(response => this.poemCount = response.data)
+                this.axios.post('/poems/brief', {
+                    "poetId": this.poet_id,
+                    "page": 1,
+                    "pageSize": 10
+                })
+                    .then(response => {
+                        this.poems = response.data.data.items
+                        this.poemCount = response.data.data.total
+                        console.log(this.poems)
+                    })
                     .catch(error => console.log(error))
             },
             onShowSizeChange(current, pageSize) {
-                var skip = (current - 1) * pageSize
                 this.pageSize = pageSize
-                this.axios.get('/poems/' + this.poet_id + '?skip=' + skip + '&limit=' + pageSize)
-                    .then(response => this.poems = response.data)
+                this.axios.post('/poems/brief', {
+                    "poetId": this.poet_id,
+                    "page": current,
+                    "pageSize": pageSize
+                })
+                    .then(response => {
+                        this.poems = response.data.data.items
+                        this.poemCount = response.data.data.total
+                    })
                     .catch(error => console.log(error))
             },
             pageChange(page, pageSize) {
                 this.pageCurrent = page
-                var skip = (page - 1) * pageSize
-                this.axios.get('/poems/' + this.poet_id + '?skip=' + skip + '&limit=' + pageSize)
-                    .then(response => this.poems = response.data)
+                this.axios.post('/poems/brief', {
+                    "poetId": this.poet_id,
+                    "page": page,
+                    "pageSize": pageSize
+                })
+                    .then(response => {
+                        this.poems = response.data.data.items
+                        this.poemCount = response.data.data.total
+                    })
                     .catch(error => console.log(error))
             }
         },
         mounted() {
             this.getPoemsById()
-            this.getPoemCount()
         },
         watch: {
             $route: {
@@ -72,7 +87,6 @@
                     this.pageCurrent = 1
                     this.pageSize = 10
                     this.getPoemsById()
-                    this.getPoemCount()
                 }
             }
         }

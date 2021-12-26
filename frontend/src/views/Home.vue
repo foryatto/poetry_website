@@ -17,7 +17,7 @@
       </a-col>
     </a-row>
 
-    <a-divider orientation="left">随机诗词</a-divider>
+    <a-divider orientation="left">今日诗词</a-divider>
     <a-row :gutter="16">
       <a-col :span="12" :xs='24' :sm='24' :md='12'>
         <a-card :title="poemtoday.name" :bordered="true" style="margin-bottom:20px">
@@ -59,8 +59,8 @@
     },
     methods: {
       getPoemtoday() {
-        this.axios.get('/poems/random')
-          .then(response => this.poemtoday = response.data)
+        this.axios.get('/poems/today')
+          .then(response => this.poemtoday = response.data.data)
           .catch(error => console.log(error))
       },
     },
