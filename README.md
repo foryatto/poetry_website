@@ -9,13 +9,15 @@
 - 后端采用`GoFrame`框架，提供`REST API`接口；
 - 前端采用`Vue`实现响应式布局，支持手机端，PC端访问；
 - 数据库使用`SQLite3`；
-- 可使用`docker`打包并生成网站；(待完成)
+- 可使用`docker`打包并生成网站；(todo)
 
-# 部署
+# 示例
 
-。。。
+![pc](C:\Users\Administrator\Desktop\pc.png)
 
-# 下载
+![mobile](C:\Users\Administrator\Desktop\mobile.png)
 
-下载地址：[release](https://github.com/foryatto/poetry)
+# Docker部署
+
+todo.
 
