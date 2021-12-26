@@ -13,9 +13,9 @@
 
 # 示例
 
-![pc](C:\Users\Administrator\Desktop\pc.png)
+![pc](https://github.com/foryatto/poetry/blob/main/example/pc.png)
 
-![mobile](C:\Users\Administrator\Desktop\mobile.png)
+![mobile](https://github.com/foryatto/poetry/blob/main/example/mobile.png)
 
 # Docker部署
 
