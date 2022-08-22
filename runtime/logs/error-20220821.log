@@ -1,0 +1,497 @@
+2022-08-21 16:55:26.762 {b8d2cd6d4c500d1755dd997d6df7b796} 500 "GET http localhost:8080 /dynasty HTTP/1.1" 0.003, ::1, "", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36 Edg/98.0.1108.43", 50, "Internal Error", ""
+Stack:
+1. exception recovered
+   1).  poetry/internal/logic/dynasty.(*sDynasty).GetList
+    	/Users/tea/program/go/poetry/internal/logic/dynasty/dynasty.go:22
+   2).  poetry/internal/controller.(*cDynasty).Index
+    	/Users/tea/program/go/poetry/internal/controller/dynasty.go:15
+   3).  github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:151
+   4).  github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_func.go:56
+   5).  github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:128
+   6).  github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:74
+   7).  github.com/gogf/gf/v2/util/gutil.TryCatch
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/util/gutil/gutil.go:55
+   8).  github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:48
+   9).  github.com/gogf/gf/v2/net/ghttp.MiddlewareHandlerResponse
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_middleware_handler_response.go:26
+   10). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:54
+   11). github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_func.go:56
+   12). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:53
+   13). github.com/gogf/gf/v2/util/gutil.TryCatch
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/util/gutil/gutil.go:55
+   14). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:48
+   15). github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_middleware_tracing.go:78
+   16). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:95
+   17). github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_func.go:56
+   18). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:94
+   19). github.com/gogf/gf/v2/util/gutil.TryCatch
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/util/gutil/gutil.go:55
+   20). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:48
+   21). github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_server_handler.go:121
+2. runtime error: invalid memory address or nil pointer dereference
+ 
+2022-08-21 16:57:28.540 {b07c6ec868500d176ccf27329c1d2224} 500 "GET http localhost:8080 /dynasty HTTP/1.1" 0.002, ::1, "", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36 Edg/98.0.1108.43", 50, "Internal Error", ""
+Stack:
+1. exception recovered
+   1).  poetry/internal/logic/dynasty.(*sDynasty).GetList
+    	/Users/tea/program/go/poetry/internal/logic/dynasty/dynasty.go:23
+   2).  poetry/internal/controller.(*cDynasty).Index
+    	/Users/tea/program/go/poetry/internal/controller/dynasty.go:15
+   3).  github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:151
+   4).  github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_func.go:56
+   5).  github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:128
+   6).  github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:74
+   7).  github.com/gogf/gf/v2/util/gutil.TryCatch
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/util/gutil/gutil.go:55
+   8).  github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:48
+   9).  github.com/gogf/gf/v2/net/ghttp.MiddlewareHandlerResponse
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_middleware_handler_response.go:26
+   10). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:54
+   11). github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_func.go:56
+   12). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:53
+   13). github.com/gogf/gf/v2/util/gutil.TryCatch
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/util/gutil/gutil.go:55
+   14). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:48
+   15). github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_middleware_tracing.go:78
+   16). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:95
+   17). github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_func.go:56
+   18). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:94
+   19). github.com/gogf/gf/v2/util/gutil.TryCatch
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/util/gutil/gutil.go:55
+   20). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:48
+   21). github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_server_handler.go:121
+2. runtime error: invalid memory address or nil pointer dereference
+ 
+2022-08-21 16:58:25.857 {883fa02076500d17aba53e17d7ffde03} 500 "GET http localhost:8080 /dynasty HTTP/1.1" 0.004, ::1, "", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36 Edg/98.0.1108.43", 50, "Internal Error", ""
+Stack:
+1. exception recovered
+   1).  poetry/internal/controller.(*cDynasty).Index
+    	/Users/tea/program/go/poetry/internal/controller/dynasty.go:19
+   2).  github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:151
+   3).  github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_func.go:56
+   4).  github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:128
+   5).  github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:74
+   6).  github.com/gogf/gf/v2/util/gutil.TryCatch
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/util/gutil/gutil.go:55
+   7).  github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:48
+   8).  github.com/gogf/gf/v2/net/ghttp.MiddlewareHandlerResponse
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_middleware_handler_response.go:26
+   9).  github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:54
+   10). github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_func.go:56
+   11). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:53
+   12). github.com/gogf/gf/v2/util/gutil.TryCatch
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/util/gutil/gutil.go:55
+   13). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:48
+   14). github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_middleware_tracing.go:78
+   15). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:95
+   16). github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_func.go:56
+   17). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:94
+   18). github.com/gogf/gf/v2/util/gutil.TryCatch
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/util/gutil/gutil.go:55
+   19). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:48
+   20). github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_server_handler.go:121
+2. runtime error: invalid memory address or nil pointer dereference
+ 
+2022-08-21 16:58:35.555 {e0bed96278500d17aca53e170e6a2edf} 500 "GET http localhost:8080 /dynasty HTTP/1.1" 0.001, ::1, "", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36 Edg/98.0.1108.43", 50, "Internal Error", ""
+Stack:
+1. exception recovered
+   1).  poetry/internal/controller.(*cDynasty).Index
+    	/Users/tea/program/go/poetry/internal/controller/dynasty.go:19
+   2).  github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:151
+   3).  github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_func.go:56
+   4).  github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:128
+   5).  github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:74
+   6).  github.com/gogf/gf/v2/util/gutil.TryCatch
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/util/gutil/gutil.go:55
+   7).  github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:48
+   8).  github.com/gogf/gf/v2/net/ghttp.MiddlewareHandlerResponse
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_middleware_handler_response.go:26
+   9).  github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:54
+   10). github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_func.go:56
+   11). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:53
+   12). github.com/gogf/gf/v2/util/gutil.TryCatch
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/util/gutil/gutil.go:55
+   13). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:48
+   14). github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_middleware_tracing.go:78
+   15). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:95
+   16). github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_func.go:56
+   17). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:94
+   18). github.com/gogf/gf/v2/util/gutil.TryCatch
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/util/gutil/gutil.go:55
+   19). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:48
+   20). github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_server_handler.go:121
+2. runtime error: invalid memory address or nil pointer dereference
+ 
+2022-08-21 21:57:38.416 {b879bc08ca600d175f6c773a3aa3083b} 500 "GET http localhost:8080 /api/poem/today HTTP/1.1" 0.001, ::1, "", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36 Edg/98.0.1108.43", 50, "Internal Error", ""
+Stack:
+1. exception recovered: implement not found for interface IPoem, forgot register?
+   1).  poetry/internal/service.Poem
+    	/Users/tea/program/go/poetry/internal/service/poem.go:20
+   2).  poetry/internal/controller.(*cPoem).Today
+    	/Users/tea/program/go/poetry/internal/controller/poem.go:14
+   3).  github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:151
+   4).  github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_func.go:56
+   5).  github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:128
+   6).  github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:74
+   7).  github.com/gogf/gf/v2/util/gutil.TryCatch
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/util/gutil/gutil.go:55
+   8).  github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:48
+   9).  github.com/gogf/gf/v2/net/ghttp.MiddlewareHandlerResponse
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_middleware_handler_response.go:26
+   10). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:54
+   11). github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_func.go:56
+   12). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:53
+   13). github.com/gogf/gf/v2/util/gutil.TryCatch
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/util/gutil/gutil.go:55
+   14). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:48
+   15). github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_middleware_tracing.go:78
+   16). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:95
+   17). github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_func.go:56
+   18). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:94
+   19). github.com/gogf/gf/v2/util/gutil.TryCatch
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/util/gutil/gutil.go:55
+   20). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:48
+   21). github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_server_handler.go:121
+ 
+2022-08-21 21:57:48.998 {489f797fcc600d17606c773a71170f22} 500 "GET http localhost:8080 /api/poem/today HTTP/1.1" 0.000, ::1, "", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36 Edg/98.0.1108.43", 50, "Internal Error", ""
+Stack:
+1. exception recovered: implement not found for interface IPoem, forgot register?
+   1).  poetry/internal/service.Poem
+    	/Users/tea/program/go/poetry/internal/service/poem.go:20
+   2).  poetry/internal/controller.(*cPoem).Today
+    	/Users/tea/program/go/poetry/internal/controller/poem.go:14
+   3).  github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:151
+   4).  github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_func.go:56
+   5).  github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:128
+   6).  github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:74
+   7).  github.com/gogf/gf/v2/util/gutil.TryCatch
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/util/gutil/gutil.go:55
+   8).  github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:48
+   9).  github.com/gogf/gf/v2/net/ghttp.MiddlewareHandlerResponse
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_middleware_handler_response.go:26
+   10). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:54
+   11). github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_func.go:56
+   12). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:53
+   13). github.com/gogf/gf/v2/util/gutil.TryCatch
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/util/gutil/gutil.go:55
+   14). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:48
+   15). github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_middleware_tracing.go:78
+   16). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:95
+   17). github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_func.go:56
+   18). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:94
+   19). github.com/gogf/gf/v2/util/gutil.TryCatch
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/util/gutil/gutil.go:55
+   20). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:48
+   21). github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_server_handler.go:121
+ 
+2022-08-21 21:57:49.939 {80019db7cc600d17616c773ad64e2bf1} 500 "GET http localhost:8080 /api/poem/today HTTP/1.1" 0.000, ::1, "", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36 Edg/98.0.1108.43", 50, "Internal Error", ""
+Stack:
+1. exception recovered: implement not found for interface IPoem, forgot register?
+   1).  poetry/internal/service.Poem
+    	/Users/tea/program/go/poetry/internal/service/poem.go:20
+   2).  poetry/internal/controller.(*cPoem).Today
+    	/Users/tea/program/go/poetry/internal/controller/poem.go:14
+   3).  github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:151
+   4).  github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_func.go:56
+   5).  github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:128
+   6).  github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:74
+   7).  github.com/gogf/gf/v2/util/gutil.TryCatch
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/util/gutil/gutil.go:55
+   8).  github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:48
+   9).  github.com/gogf/gf/v2/net/ghttp.MiddlewareHandlerResponse
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_middleware_handler_response.go:26
+   10). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:54
+   11). github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_func.go:56
+   12). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:53
+   13). github.com/gogf/gf/v2/util/gutil.TryCatch
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/util/gutil/gutil.go:55
+   14). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:48
+   15). github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_middleware_tracing.go:78
+   16). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:95
+   17). github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_func.go:56
+   18). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:94
+   19). github.com/gogf/gf/v2/util/gutil.TryCatch
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/util/gutil/gutil.go:55
+   20). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:48
+   21). github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_server_handler.go:121
+ 
+2022-08-21 21:59:36.282 {68eff574e5600d175e2d443ecaf9def7} 200 "GET http localhost:8080 /api/poem/today HTTP/1.1" 0.087, ::1, "", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36 Edg/98.0.1108.43", 52, "Database Operation Error", ""
+Stack:
+1. SQL logic error: no such column: poet (1), SELECT `id`,`name`,`profile`,`dynasty_id` FROM `poet` WHERE (id = '445235585716584448') AND (poet) LIMIT 1
+
+   1).  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/database/gdb/gdb_core_underlying.go:303
+   2).  github.com/gogf/gf/v2/database/gdb.(*Core).DoQuery
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/database/gdb/gdb_core_underlying.go:62
+   3).  github.com/gogf/gf/v2/database/gdb.(*Core).DoSelect
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/database/gdb/gdb_core.go:155
+   4).  github.com/gogf/gf/v2/database/gdb.(*HookSelectInput).Next
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/database/gdb/gdb_model_hook.go:110
+   5).  github.com/gogf/gf/v2/database/gdb.(*Model).doGetAllBySql
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/database/gdb/gdb_model_select.go:543
+   6).  github.com/gogf/gf/v2/database/gdb.(*Model).doGetAll
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/database/gdb/gdb_model_select.go:46
+   7).  github.com/gogf/gf/v2/database/gdb.(*Model).One
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/database/gdb/gdb_model_select.go:136
+   8).  github.com/gogf/gf/v2/database/gdb.(*Model).One
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/database/gdb/gdb_model_select.go:134
+   9).  github.com/gogf/gf/v2/database/gdb.(*Model).doStruct
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/database/gdb/gdb_model_select.go:234
+   10). github.com/gogf/gf/v2/database/gdb.(*Model).Scan
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/database/gdb/gdb_model_select.go:322
+   11). poetry/internal/logic/poet.(*sPoet).GetById
+    	/Users/tea/program/go/poetry/internal/logic/poet/poet.go:22
+   12). poetry/internal/logic/poem.(*sPoem).Today
+    	/Users/tea/program/go/poetry/internal/logic/poem/poem.go:34
+   13). poetry/internal/controller.(*cPoem).Today
+    	/Users/tea/program/go/poetry/internal/controller/poem.go:14
+   14). github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:151
+   15). github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_func.go:56
+   16). github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:128
+   17). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:74
+   18). github.com/gogf/gf/v2/util/gutil.TryCatch
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/util/gutil/gutil.go:55
+   19). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:48
+   20). github.com/gogf/gf/v2/net/ghttp.MiddlewareHandlerResponse
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_middleware_handler_response.go:26
+   21). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:54
+   22). github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_func.go:56
+   23). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:53
+   24). github.com/gogf/gf/v2/util/gutil.TryCatch
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/util/gutil/gutil.go:55
+   25). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:48
+   26). github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_middleware_tracing.go:78
+   27). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:95
+   28). github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_func.go:56
+   29). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:94
+   30). github.com/gogf/gf/v2/util/gutil.TryCatch
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/util/gutil/gutil.go:55
+ 
+2022-08-21 21:59:36.676 {b8662b91e5600d175f2d443ecff49211} 200 "GET http localhost:8080 /api/poem/today HTTP/1.1" 0.008, ::1, "", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36 Edg/98.0.1108.43", 52, "Database Operation Error", ""
+Stack:
+1. SQL logic error: no such column: poet (1), SELECT `id`,`name`,`profile`,`dynasty_id` FROM `poet` WHERE (id = '500600200948088832') AND (poet) LIMIT 1
+
+   1).  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/database/gdb/gdb_core_underlying.go:303
+   2).  github.com/gogf/gf/v2/database/gdb.(*Core).DoQuery
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/database/gdb/gdb_core_underlying.go:62
+   3).  github.com/gogf/gf/v2/database/gdb.(*Core).DoSelect
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/database/gdb/gdb_core.go:155
+   4).  github.com/gogf/gf/v2/database/gdb.(*HookSelectInput).Next
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/database/gdb/gdb_model_hook.go:110
+   5).  github.com/gogf/gf/v2/database/gdb.(*Model).doGetAllBySql
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/database/gdb/gdb_model_select.go:543
+   6).  github.com/gogf/gf/v2/database/gdb.(*Model).doGetAll
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/database/gdb/gdb_model_select.go:46
+   7).  github.com/gogf/gf/v2/database/gdb.(*Model).One
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/database/gdb/gdb_model_select.go:136
+   8).  github.com/gogf/gf/v2/database/gdb.(*Model).One
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/database/gdb/gdb_model_select.go:134
+   9).  github.com/gogf/gf/v2/database/gdb.(*Model).doStruct
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/database/gdb/gdb_model_select.go:234
+   10). github.com/gogf/gf/v2/database/gdb.(*Model).Scan
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/database/gdb/gdb_model_select.go:322
+   11). poetry/internal/logic/poet.(*sPoet).GetById
+    	/Users/tea/program/go/poetry/internal/logic/poet/poet.go:22
+   12). poetry/internal/logic/poem.(*sPoem).Today
+    	/Users/tea/program/go/poetry/internal/logic/poem/poem.go:34
+   13). poetry/internal/controller.(*cPoem).Today
+    	/Users/tea/program/go/poetry/internal/controller/poem.go:14
+   14). github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:151
+   15). github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_func.go:56
+   16). github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:128
+   17). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:74
+   18). github.com/gogf/gf/v2/util/gutil.TryCatch
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/util/gutil/gutil.go:55
+   19). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:48
+   20). github.com/gogf/gf/v2/net/ghttp.MiddlewareHandlerResponse
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_middleware_handler_response.go:26
+   21). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:54
+   22). github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_func.go:56
+   23). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:53
+   24). github.com/gogf/gf/v2/util/gutil.TryCatch
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/util/gutil/gutil.go:55
+   25). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:48
+   26). github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_middleware_tracing.go:78
+   27). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:95
+   28). github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_func.go:56
+   29). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:94
+   30). github.com/gogf/gf/v2/util/gutil.TryCatch
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/util/gutil/gutil.go:55
+ 
+2022-08-21 22:01:58.885 {40e36bad06610d1720ed001f3ac0242a} 500 "GET http localhost:8080 /api/poem/today HTTP/1.1" 0.009, ::1, "", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36 Edg/98.0.1108.43", 50, "Internal Error", ""
+Stack:
+1. exception recovered
+   1).  poetry/internal/controller.(*cPoem).Today
+    	/Users/tea/program/go/poetry/internal/controller/poem.go:18
+   2).  github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:151
+   3).  github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_func.go:56
+   4).  github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:128
+   5).  github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:74
+   6).  github.com/gogf/gf/v2/util/gutil.TryCatch
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/util/gutil/gutil.go:55
+   7).  github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:48
+   8).  github.com/gogf/gf/v2/net/ghttp.MiddlewareHandlerResponse
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_middleware_handler_response.go:26
+   9).  github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:54
+   10). github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_func.go:56
+   11). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:53
+   12). github.com/gogf/gf/v2/util/gutil.TryCatch
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/util/gutil/gutil.go:55
+   13). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:48
+   14). github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_middleware_tracing.go:78
+   15). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:95
+   16). github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_func.go:56
+   17). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:94
+   18). github.com/gogf/gf/v2/util/gutil.TryCatch
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/util/gutil/gutil.go:55
+   19). github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_request_middleware.go:48
+   20). github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    	/Users/tea/go/pkg/mod/github.com/gogf/gf/v2@v2.0.6/net/ghttp/ghttp_server_handler.go:121
+2. runtime error: invalid memory address or nil pointer dereference
+ 

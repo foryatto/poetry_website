@@ -1,0 +1,17 @@
+server:
+  address: ":8080"
+  openapiPath: "/api.json"
+  swaggerPath: "/swagger"
+
+  logPath: "./runtime/logs"
+  logStdout: true
+  errorStack: true
+  errorLogEnabled: true
+  errorLogPattern: "error-{Ymd}.log"
+  accessLogEnabled: false
+  accessLogPattern: "access-{Ymd}.log"
+
+database:
+  default:
+    link:  "sqlite:./manifest/db/shici.db"
+    debug: true
