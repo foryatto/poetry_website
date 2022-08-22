@@ -25,6 +25,9 @@ func (*cPoem) GetBrief(ctx context.Context, req *v1.PoemBriefReq) (res *v1.PoemB
 		Page:     req.Page,
 		PageSize: req.PageSize,
 	})
+	if err != nil {
+		return res, err
+	}
 	res = &v1.PoemBriefRes{
 		List:  out.List,
 		Total: out.Total,
@@ -51,6 +54,9 @@ func (*cPoem) Search(ctx context.Context, req *v1.PoemSearchReq) (res *v1.PoemSe
 		Page:     req.Page,
 		PageSize: req.PageSize,
 	})
+	if err != nil {
+		return res, err
+	}
 	res = &v1.PoemSearchRes{
 		List:  out.List,
 		Total: out.Total,
