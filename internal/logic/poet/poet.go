@@ -25,7 +25,9 @@ func (*sPoet) Get(ctx context.Context, in *model.PoetGetInput) (out *model.PoetG
 	}
 	out = &model.PoetGetOutput{Total: count}
 	err = sql.Page(in.Page, in.PageSize).Scan(&out.List)
-
+	if err != nil {
+		return nil, err
+	}
 	length := len(out.List)
 	for i := 0; i < length; i++ {
 		dao.Dynasty.Ctx(ctx).Where(dao.Dynasty.Columns().Id, out.List[i].DynastyId).Scan(&out.List[i].Dynasty)
@@ -40,9 +42,7 @@ func (*sPoet) GetById(ctx context.Context, in string) (out *model.Poet, err erro
 	if err != nil {
 		return out, err
 	}
-	dao.Dynasty.Ctx(ctx).Where(dao.Dynasty.Columns().Id, out.DynastyId).Scan(&out.Dynasty)
-	if err != nil {
-		return out, err
-	}
+	err = dao.Dynasty.Ctx(ctx).Where(dao.Dynasty.Columns().Id, out.DynastyId).Scan(&out.Dynasty)
+
 	return
 }

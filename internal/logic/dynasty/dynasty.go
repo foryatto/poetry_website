@@ -26,5 +26,5 @@ func (s *sDynasty) GetList(ctx context.Context) (out *model.DynastyGetListOutput
 		return out, err
 	}
 	err = sql.Scan(&out.List)
-	return out, nil
+	return
 }

@@ -32,9 +32,6 @@ func (*sPoem) Today(ctx context.Context) (out *model.Poem, err error) {
 	}
 
 	out.Writer, err = poet.New().GetById(ctx, out.PoetId)
-	if err != nil {
-		return out, err
-	}
 	return
 }
 
@@ -46,7 +43,7 @@ func (*sPoem) GetBrief(ctx context.Context, in *model.PoemBriefInput) (out *mode
 	}
 	out = &model.PoemBriefOutput{Total: count}
 	err = sql.Page(in.Page, in.PageSize).Scan(&out.List)
-	return out, nil
+	return
 }
 
 func (*sPoem) GetDetail(ctx context.Context, in *model.PoemDetailInput) (out *model.PoemDetailOutput, err error) {
@@ -58,7 +55,7 @@ func (*sPoem) GetDetail(ctx context.Context, in *model.PoemDetailInput) (out *mo
 		return nil, err
 	}
 	out.Poem.Writer, err = poet.New().GetById(ctx, out.Poem.PoetId)
-	return out, nil
+	return
 }
 
 func (*sPoem) Search(ctx context.Context, in *model.PoemSearchInput) (out *model.PoemSearchOutput, err error) {
@@ -69,5 +66,5 @@ func (*sPoem) Search(ctx context.Context, in *model.PoemSearchInput) (out *model
 	}
 	out = &model.PoemSearchOutput{Total: count}
 	err = sql.Page(in.Page, in.PageSize).Scan(&out.List)
-	return out, nil
+	return
 }
