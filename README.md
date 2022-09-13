@@ -13,6 +13,7 @@
 
 # 运行
 ```bash
+cd backend
 go mod tidy
 go run main.go
 ```
