@@ -18,49 +18,7 @@ const poets = ref([
     }
 ])
 const poetCount = ref(0)
-function getPoets() {
-    fetch(apiBaseUrl + '/poet', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            "dynastyId": dynastyId,
-            "page": 1,
-            "pageSize": 10,
-        })
-    })
-        .then(response => response.json())
-        .then(json => {
-            poets.value = json.data.list
-            poetCount.value = json.data.total
-        })
-        .catch(error => console.log(error))
-}
-
-function onShowSizeChange(current, newPageSize) {
-    pageSize.value = newPageSize
-    fetch(apiBaseUrl + '/poet', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            "dynastyId": dynastyId,
-            "page": current,
-            "pageSize": newPageSize,
-        })
-    })
-        .then(response => response.json())
-        .then(json => {
-            poets.value = json.data.list
-            poetCount.value = json.data.total
-        })
-        .catch(error => console.log(error))
-}
-
-function pageChange(page, pageSize) {
-    pageCurrent.value = page
+function getPoets(page, pageSize) {
     fetch(apiBaseUrl + '/poet', {
         method: 'POST',
         headers: {
@@ -80,13 +38,23 @@ function pageChange(page, pageSize) {
         .catch(error => console.log(error))
 }
 
+function onShowSizeChange(current, newPageSize) {
+    pageSize.value = newPageSize
+    getPoets(current, newPageSize)
+}
+
+function pageChange(page, pageSize) {
+    pageCurrent.value = page
+    getPoets(page, pageSize)
+}
+
 watch(() => route.query.dynasty_id, () => {
     dynastyId = route.query.dynasty_id
-    getPoets()
+    getPoets(1, 10)
 })
 
 onMounted(() => {
-    getPoets()
+    getPoets(1, 10)
 })
 </script>
 

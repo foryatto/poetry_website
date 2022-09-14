@@ -19,7 +19,7 @@ const poems = ref([
     }
 ])
 const poemCount = ref(0)
-function getPoems() {
+function getPoems(page, pageSize) {
     fetch(apiBaseUrl + '/poem/brief', {
         method: 'POST',
         headers: {
@@ -41,54 +41,22 @@ function getPoems() {
 
 function onShowSizeChange(current, newPageSize) {
     pageSize.value = newPageSize
-    fetch(apiBaseUrl + '/poem/brief', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            "poetId": poetId,
-            "page": current,
-            "pageSize": newPageSize,
-        })
-    })
-        .then(response => response.json())
-        .then(json => {
-            poems.value = json.data.list
-            poemCount.value = json.data.total
-        })
-        .catch(error => console.log(error))
+    getPoems(current, newPageSize)
 }
 
 function pageChange(page, pageSize) {
     pageCurrent.value = page
-    fetch(apiBaseUrl + '/poem/brief', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            "poetId": poetId,
-            "page": page,
-            "pageSize": pageSize,
-        })
-    })
-        .then(response => response.json())
-        .then(json => {
-            poems.value = json.data.list
-            poemCount.value = json.data.total
-        })
-        .catch(error => console.log(error))
+    getPoems(page, pageSize)
 }
 
 watch(() => route.query.poet_id, () => {
     poetId = route.query.poet_id
     poetName = route.query.poet_name
-    getPoems()
+    getPoems(1, 10)
 })
 
 onMounted(() => {
-    getPoems()
+    getPoems(1, 10)
 })
 </script>
     
