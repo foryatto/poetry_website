@@ -13,7 +13,7 @@ app.use(router)
 
 // "http://localhost:8080/api" => "/api"
 app.provide("appConfig", {
-        "apiBaseUrl": "/api",
+        "apiBaseUrl": "http://localhost:8080/api",
     }
 )
 
